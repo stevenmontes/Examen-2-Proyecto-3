@@ -1,0 +1,90 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-empleado-heading" jhiTranslate="examen2App.empleado.home.createOrEditLabel">Create or edit a Empleado</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.nombre" for="field_nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="field_nombre"
+                           formControlName="nombre"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.primerApellido" for="field_primerApellido">Primer Apellido</label>
+                    <input type="text" class="form-control" name="primerApellido" id="field_primerApellido"
+                           formControlName="primerApellido"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.segundoApellido" for="field_segundoApellido">Segundo Apellido</label>
+                    <input type="text" class="form-control" name="segundoApellido" id="field_segundoApellido"
+                           formControlName="segundoApellido"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.sexo" for="field_sexo">Sexo</label>
+                    <select class="form-control" name="sexo" formControlName="sexo" id="field_sexo">
+                        <option value="Masculino">{{ 'examen2App.Sexo.Masculino' | translate }}</option>
+                        <option value="Femenino">{{ 'examen2App.Sexo.Femenino' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.fechaNacimiento" for="field_fechaNacimiento">Fecha Nacimiento</label>
+                    <div class="d-flex">
+                        <input id="field_fechaNacimiento" type="datetime-local" class="form-control" name="fechaNacimiento" formControlName="fechaNacimiento" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.fechaIngreso" for="field_fechaIngreso">Fecha Ingreso</label>
+                    <div class="d-flex">
+                        <input id="field_fechaIngreso" type="datetime-local" class="form-control" name="fechaIngreso" formControlName="fechaIngreso" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.salario" for="field_salario">Salario</label>
+                    <input type="number" class="form-control" name="salario" id="field_salario"
+                           formControlName="salario"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.puesto" for="field_puesto">Puesto</label>
+                    <select class="form-control" name="puesto" formControlName="puesto" id="field_puesto">
+                        <option value="Programador">{{ 'examen2App.Puesto.Programador' | translate }}</option>
+                        <option value="Contador">{{ 'examen2App.Puesto.Contador' | translate }}</option>
+                        <option value="Disennador">{{ 'examen2App.Puesto.Disennador' | translate }}</option>
+                        <option value="Gerente">{{ 'examen2App.Puesto.Gerente' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examen2App.empleado.estado" for="field_estado">Estado</label>
+                    <select class="form-control" name="estado" formControlName="estado" id="field_estado">
+                        <option value="Activo">{{ 'examen2App.Estado.Activo' | translate }}</option>
+                        <option value="Inactivo">{{ 'examen2App.Estado.Inactivo' | translate }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

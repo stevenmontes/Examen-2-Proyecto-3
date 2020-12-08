@@ -1,0 +1,24 @@
+{
+  "examen2App": {
+    "jefatura": {
+      "home": {
+        "title": "Jefaturas",
+        "createLabel": "Crear nuevo Jefatura",
+        "createOrEditLabel": "Crear o editar Jefatura",
+        "notFound": "Ningún Jefaturas encontrado"
+      },
+      "created": "Un nuevo Jefatura ha sido creado con el identificador {{ param }}",
+      "updated": "Un Jefatura ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Jefatura ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Jefatura {{ id }}?"
+      },
+      "detail": {
+        "title": "Jefatura"
+      },
+      "fechaInicio": "Fecha Inicio",
+      "empleado": "Empleado",
+      "departamento": "Departamento"
+    }
+  }
+}

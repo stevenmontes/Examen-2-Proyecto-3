@@ -1,0 +1,72 @@
+{
+  "name": "Empleado",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "primerApellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "segundoApellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sexo",
+      "fieldType": "Sexo",
+      "fieldValues": "Masculino,Femenino"
+    },
+    {
+      "fieldName": "fechaNacimiento",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "fechaIngreso",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "salario",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "puesto",
+      "fieldType": "Puesto",
+      "fieldValues": "Programador,Contador,Disennador,Gerente"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Estado",
+      "fieldValues": "Activo,Inactivo"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "jefatura",
+      "otherEntityRelationshipName": "empleado",
+      "relationshipName": "jefatura",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "departamento",
+      "otherEntityRelationshipName": "empleado",
+      "relationshipName": "departamento",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201208052053",
+  "entityTableName": "empleado",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

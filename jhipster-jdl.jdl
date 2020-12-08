@@ -10,6 +10,13 @@ enum Estado {
     Inactivo
 }
 
+enum Puesto{
+	Programador,
+    Contador,
+    Disennador,
+    Gerente
+}
+
 entity Empleado {
 	Nombre String,
     PrimerApellido String,
@@ -17,8 +24,8 @@ entity Empleado {
     Sexo Sexo,
     FechaNacimiento ZonedDateTime,
     FechaIngreso ZonedDateTime,
-    Puesto String,
     Salario Double,
+    Puesto Puesto,
     Estado Estado
 }
 

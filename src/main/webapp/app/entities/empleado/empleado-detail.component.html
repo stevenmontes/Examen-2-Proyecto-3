@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="empleado">
+            <h2><span jhiTranslate="examen2App.empleado.detail.title">Empleado</span> {{ empleado.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="examen2App.empleado.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{ empleado.nombre }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.primerApellido">Primer Apellido</span></dt>
+                <dd>
+                    <span>{{ empleado.primerApellido }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.segundoApellido">Segundo Apellido</span></dt>
+                <dd>
+                    <span>{{ empleado.segundoApellido }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.sexo">Sexo</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'examen2App.Sexo.' + empleado.sexo }}">{{ empleado.sexo }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.fechaNacimiento">Fecha Nacimiento</span></dt>
+                <dd>
+                    <span>{{ empleado.fechaNacimiento }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.fechaIngreso">Fecha Ingreso</span></dt>
+                <dd>
+                    <span>{{ empleado.fechaIngreso }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.salario">Salario</span></dt>
+                <dd>
+                    <span>{{ empleado.salario }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.puesto">Puesto</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'examen2App.Puesto.' + empleado.puesto }}">{{ empleado.puesto }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.empleado.estado">Estado</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'examen2App.Estado.' + empleado.estado }}">{{ empleado.estado }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/empleado', empleado.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

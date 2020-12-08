@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="departamento">
+            <h2><span jhiTranslate="examen2App.departamento.detail.title">Departamento</span> {{ departamento.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="examen2App.departamento.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{ departamento.nombre }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.departamento.descripcion">Descripcion</span></dt>
+                <dd>
+                    <span>{{ departamento.descripcion }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.departamento.estado">Estado</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'examen2App.Estado.' + departamento.estado }}">{{ departamento.estado }}</span>
+                </dd>
+                <dt><span jhiTranslate="examen2App.departamento.empleado">Empleado</span></dt>
+                <dd>
+                    <span *ngFor="let empleado of departamento.empleados; let last = last">
+                        <a [routerLink]="['/empleado', empleado?.id, 'view']">{{ empleado.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/departamento', departamento.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

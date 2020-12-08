@@ -1,0 +1,26 @@
+{
+  "name": "Puesto",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Estado",
+      "fieldValues": "Activo,Inactivo"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201208052353",
+  "entityTableName": "puesto",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

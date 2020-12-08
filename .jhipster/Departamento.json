@@ -1,0 +1,46 @@
+{
+  "name": "Departamento",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Estado",
+      "fieldValues": "Activo,Inactivo"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "empleado",
+      "otherEntityRelationshipName": "departamento",
+      "relationshipName": "empleado",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "jefatura",
+      "otherEntityRelationshipName": "departamento",
+      "relationshipName": "jefatura",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201208052153",
+  "entityTableName": "departamento",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
