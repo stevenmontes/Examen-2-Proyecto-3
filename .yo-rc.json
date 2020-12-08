@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.proyecto.tres.examen2",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "6.10.4",
+    "applicationType": "monolith",
+    "baseName": "Examen2",
+    "packageName": "com.proyecto.tres.examen2",
+    "packageFolder": "com/proyecto/tres/examen2",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZDBlZWM0MDYxOGQ5NDk3MzM0ZjZjZjcwNTFkOTJhMGRlMDQ5OWQ1NGMxOGE2OTBkYzFhYzM1YzY4OWFlNDUxOTgzYWE4MTEyNzJkNzJhMzQ1N2QzNmJmN2E0ZjBhNzg3ZDM4YzFmZWUyNDk2N2M5NWY2ZWMwNmY3ZjNjMzc3NmQ=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "sandstone",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1607401955812,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": ["es"],
+    "blueprints": []
+  }
+}

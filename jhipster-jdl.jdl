@@ -1,0 +1,50 @@
+
+
+enum Sexo {
+	Masculino,
+    Femenino
+}
+
+enum Estado {
+	Activo,
+    Inactivo
+}
+
+entity Empleado {
+	Nombre String,
+    PrimerApellido String,
+    SegundoApellido String,
+    Sexo Sexo,
+    FechaNacimiento ZonedDateTime,
+    FechaIngreso ZonedDateTime,
+    Puesto String,
+    Salario Double,
+    Estado Estado
+}
+
+entity Departamento{
+	Nombre String
+    Descripcion String,
+    Estado Estado
+}
+
+entity Jefatura {
+	FechaInicio ZonedDateTime
+}
+
+entity Puesto {
+	Nombre String,
+    Estado Estado
+}
+
+relationship OneToOne{
+	Jefatura to Empleado
+    Jefatura to Departamento
+}
+
+relationship ManyToMany{
+	Departamento to Empleado
+}
+
+
+
