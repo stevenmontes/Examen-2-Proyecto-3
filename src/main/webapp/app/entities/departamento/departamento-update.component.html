@@ -34,7 +34,7 @@
                 <div class="form-group">
                     <label jhiTranslate="examen2App.departamento.empleado" for="field_empleados">Empleado</label>
                     <select class="form-control" id="field_empleados" multiple name="empleados" formControlName="empleados">
-                        <option [ngValue]="getSelected(editForm.get('empleados')!.value, empleadoOption)" *ngFor="let empleadoOption of empleados; trackBy: trackById">{{ empleadoOption.id }}</option>
+                        <option [ngValue]="getSelected(editForm.get('empleados')!.value, empleadoOption)" *ngFor="let empleadoOption of empleados; trackBy: trackById">{{ empleadoOption.nombre }}</option>
                     </select>
                 </div>
             </div>
